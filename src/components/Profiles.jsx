@@ -28,14 +28,14 @@ const Profiles = ({profileDetails}) => {
                 <span className='user-profile-image'><img src={profileDetails.profileimg}/></span>
                 <span>
                     <p className='user-name'>{profileDetails.userName}</p>
-                    <p className='user-desc'>{profileDetails.description}</p>
+                    {profileDetails.description && <p className='user-desc'>{profileDetails.description}</p>}
                 </span>
             </div>
 
             <hr/>
 
             <div className='profile-link'>
-                <a target='blank' href={profileDetails.link}>View {profileDetails.profile} Profile ➔ </a>
+                <a target='blank' href={profileDetails.link}>View <span>{profileDetails.profile}</span> Profile ➔ </a>
             </div>
         </div>
     </div>

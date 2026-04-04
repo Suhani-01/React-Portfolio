@@ -23,7 +23,7 @@ function App() {
 
     const options={
       root:null,
-      threshold:0.6,  //60% section visible
+      threshold:0.5,  //50% section visible
     }
 
 
@@ -44,6 +44,7 @@ function App() {
 
   return (
     <>
+    <div className='shadow-over'></div>
       
         <Navbar activeSection={activeSection} />
      
