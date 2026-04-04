@@ -65,6 +65,11 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <div className="happy-outer">
+        <img src="/images/smile.png"  className="happy"/>
+      </div>
+      
     </section>
   );
 };

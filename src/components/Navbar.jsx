@@ -90,14 +90,14 @@ function Navbar({ activeSection }) {
           </div>
 
           <div className="nav-right">
-            { !sideBarActive && 
-              <a style={{ textDecoration: "none" }} href="#contact">
+            
+              <a className="cnt" style={{ textDecoration: "none" }} href="#contact">
               <div className="contact-button">
                 <p>Contact Me</p>
                 <div className="contact-arrow">↓</div>
               </div>
             </a>
-            }
+           
             
 
             <button onClick={()=>{
@@ -111,8 +111,13 @@ function Navbar({ activeSection }) {
       <div style={{display : sideBarActive?"grid":"none" , backgroundColor : closingSideBar?"transparent":""}} className="nav-over">
         {/* Black Overlay: Background shadow ke liye */}
         <div onClick={()=>{
-          setSideBarActive(false)
-        }} className="overlay-shadow"></div>
+            setClosingSideBar(true);
+            setTimeout(()=>{
+              setClosingSideBar(false);
+              setSideBarActive(false);
+            },300)
+            
+          }} className="overlay-shadow"></div>
 
         {/* Sidebar: Right half content ke liye */}
         <div className={`sidebar-container ${closingSideBar ? "hide" : ""}`}>

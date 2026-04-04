@@ -11,8 +11,7 @@ const EducationBox = ({ educationDetails }) => {
         {/* time details */}
       <div className="time-box">
         <div  className="timeline-circle">
-          <div
-            style={{
+          <div className={`${educationDetails.end === "Present"?"blinking":""}`}            style={{
               backgroundColor:
                 educationDetails.end === "Present" ? "orangered" : "",
             }}

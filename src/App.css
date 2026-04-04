@@ -1,4 +1,6 @@
-
+*{
+  -webkit-tap-highlight-color:transparent;
+}
 :root {
   --section-color-2:aliceblue;
 }
@@ -11,13 +13,15 @@
   margin: 0;
   padding: 0;
 }
-body{
+#root{
   background-color: #FAF9F6;
   overflow-x: hidden;
   width: 100%;
 
 }
-
+.hide-star{
+  display: none;
+}
 .navbar{
   position: fixed;
   width: 100%;
@@ -257,20 +261,29 @@ body{
   flex-direction: column;
   gap: 2rem;
   font-family: sans-serif;
+
   
   
 }
-.about-detail-bottom div{
-  color: #cb6ce6;
+.about-static-dynamic{
   font-weight: bold;
   font-size: 1.4rem;
+  display: flex;
+  gap:6px;
   text-shadow:0px 1px 2px rgb(84, 84, 84) ;
 }
-.dynamic-about{
-  color: #452dc6;
+.about-static{
+  color: #cb6ce6;
 }
+
+.about-dynamic{
+    position: relative;
+    bottom: -1px;
+    color: #452dc6;
+  }
 .about-detail-bottom button{
   width: fit-content;
+  overflow: hidden;
   padding: 10px;
   padding-inline: 1.7rem;
   border-radius: 40px;
@@ -279,6 +292,7 @@ body{
   color: white;
   cursor: pointer; 
 }
+
 .about-right{
   padding-top: 6rem;
   height: 100%;
@@ -393,7 +407,21 @@ body{
 .skill-section{ 
   width: 100%;
 }
+.blinking{
+  animation:twinkle 1s ease-in-out infinite;
+}
 
+@keyframes twinkle{
+  0%{
+    opacity: 0.3;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.3;
+  }
+}
 .section-heading{
   width: 100%;
   text-align: center;
@@ -562,6 +590,11 @@ body{
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.project-card:hover{
+  transform: translate(-4px,-4px);
+  box-shadow: 9px 9px #453730;
+}
+
 .project-card-left{
    display: flex;
    flex-direction: column;
@@ -633,9 +666,7 @@ body{
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.project-card:hover{
-  transform: scale(1.02);
-}
+
 
 
 /* educaiton section */
@@ -1132,7 +1163,35 @@ body{
   opacity: 0.6;
 }
 
+.happy-outer{
+  width: 100%;
+  height: 50px;
+  position: relative;
+  animation: tier 15s linear infinite;
+}
+.happy{
+  width: 4%;
+  animation: circle 2s linear infinite;
+  
+}
 
+@keyframes tier {
+  0%{
+    transform: translate(-4%);
+  }
+  100%{
+    transform: translate(100%);
+  }
+
+}
+@keyframes circle {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 
 
 
@@ -1207,6 +1266,7 @@ body{
   }
   .name img{
     height: 4rem;
+    animation: circle 4s linear infinite;
   }
   .skill-card-vector-1{
     left: -10px;
@@ -1319,7 +1379,7 @@ body{
     display: flex;
     flex-direction: column-reverse;
   }
-
+  
   .profile-card-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1379,6 +1439,9 @@ body{
     justify-content: center;
     align-items: center;
   }
+  .cnt{
+    display: none;
+  }
   .nav-right{
     display: flex;
     gap: 1rem;
@@ -1411,6 +1474,7 @@ body{
   .skill-card-section{
     gap: 1.5rem;
   }
+  
   .skill-card{
     width:47%;
   }
@@ -1481,7 +1545,23 @@ body{
   .view-port{
     padding-inline: 25px;
   }
-
+  .hide-star{
+  display: block;
+  }
+  .navbar{
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+    padding: 0.5rem;
+    padding-inline: 1rem;
+  }
+  .navbar-menue{
+    font-size: 1.8rem;
+    color: #4338ca;
+    padding-inline: 10px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+  }
+ 
   .about-container{
     align-items: center;
     gap: 2rem;
@@ -1494,22 +1574,20 @@ body{
     gap: 2rem;
   }
 
-  .about-detail-bottom div {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
+
   .profile-container{
-    margin-top: 5rem;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
     height: 300px;
     aspect-ratio: 3/4;  
-    margin-left: 40%; 
+    margin-left: 10%; 
   }
   .about-heading{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     top:6rem;
-    margin-left: 25%;
+    margin-left: 22%;
   }
   .who-am-I p{
     width: 100%;
@@ -1526,10 +1604,10 @@ body{
   .skill-card-vector-1{
     height: 5rem;
     top: -1.5rem;
-    left:0rem;
+    left:-1rem;
   }
   .skill-card-section{
-    padding-inline: 25px;
+    padding-inline: 10px;
   }
   .skill-card-header h3{
     font-size: 1.2rem;
@@ -1548,19 +1626,38 @@ body{
   }
   .all-education{
     margin-top: 6rem;
+    padding-inline: 12px;
   }
   .time-box{
-    left: -6.7rem;
+    left: -7.5rem;
   }
   .time-time{
-    font-size: 0.7rem;
-    padding-inline: 0.1rem;
+    font-size: 0.54rem;
+    padding-inline: 0.3rem;
+    box-shadow: 2px 2px #4338ca , 4px 4px #e2a9f1;
+  }
+  .group-skills .skill{
+    padding: 6px;
+    box-shadow: 2px 2px 10px #4438ca8f;
+    border: none;
+    padding-inline: 10px;
+    border-radius: 20px;
   }
    
   .education-box{
     margin-left:3rem;
     padding: 1rem;
+    width: 100%;
 
+  }
+  .edu-head h3{
+    font-size: 1.3rem;
+  }
+  .edu-head li{
+    font-size: 0.8rem;
+  }
+  .edu-desc{
+    font-size: 0.8rem;
   }
   .education-tag{
     left: 25%;
@@ -1576,7 +1673,14 @@ body{
   }
   .project-card-left{
     align-items: center;
+    font-size: 0.8rem;
   }
+  .project-card-left .group-skills .skill{
+    padding: 3px;
+    padding-inline: 10px;
+    background-color: #4438ca20;
+  }
+  
   .project-image{
     width: 100%;
   }
@@ -1596,6 +1700,14 @@ body{
     justify-content: center;
     margin-top: 0rem;
   }
+  .about-detail-bottom button{
+    font-size: 1rem;
+    box-shadow: 2px 2px 10px white;
+  }
+  .about-detail-bottom a{
+    margin-inline: auto;
+    
+  }
   .all-expereince{
     margin-top: 6rem;
   }
@@ -1609,6 +1721,17 @@ body{
   .user-profile-image{
     width: 0%;
   }
+  .about-static-dynamic{
+    text-shadow: none; 
+    font-size: 1.2rem;
+  }
+  .about-static{
+    color: #4338ca;
+  }
+  .about-dynamic{
+    color: #cb6ce6;
+  }
+  
   .profile-platform{
     display: flex;
     flex-direction: column;
@@ -1620,13 +1743,15 @@ body{
      
   }
   .profile-card{
-    
+    box-shadow: 2px 2px 10px #4338ca;
+    border: none;
     padding: 0.5rem;
     margin: 0px;
   }
   .cert-line{
-    top: 31.5%;
-    box-shadow: 5px 5px white;
+    height: 1px;
+    top: 31.5%; 
+    background-color: #4438caac;
   }
   .profile-details{
     padding: 0.4rem;
@@ -1644,6 +1769,9 @@ body{
   .profile-link>a>span{
     display: none;
   }
+  .experience-container .time-box{
+    left: -6.8rem;
+  }
 
    .cert-card{
     height: fit-content;
@@ -1651,7 +1779,34 @@ body{
     padding: 1rem;
     justify-content: center;
     align-items: center;
+    border: none;
     
+   }
+   .close-navbar{
+    padding-inline: 1rem;
+   }
+   .nav-over{
+    grid-template-columns: 1fr 2fr;
+   }
+   .profile-bottom .circle{
+    border: white;
+   }
+   .profile-name{
+     
+    
+    font-size: 0.8rem;
+    padding-inline: 1.5rem;
+    color: white;
+    font-weight: bold;
+   }
+   .cert-card-container{
+    padding-inline: 0px;
+   }
+   .profile-card-container{
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+
+    padding-inline: 0px;
    }
    .cert-icon{
     height: 5rem;
@@ -1660,6 +1815,12 @@ body{
     align-items: center;
     justify-content: center;
     
+   }
+
+    .cert-content>div>a{
+    background-color: orange;
+    border: 1px solid orangered;
+    box-shadow: 2px 2px 5px #4438ca62;
    }
    .cert-content{
     align-items: center;
@@ -1677,6 +1838,41 @@ body{
   .logo-text{
     display: none;
   }
+  .footer-icons a{
+    border: 1px solid #453730;
+    background-color: white;
+  }
+
+  .contact-form{
+    padding: 1rem;
+    border: 1px solid #cb6ce6;
+    border-top: 10px solid #cb6ce6;
+  }
+  .contact-form input{
+    font-size: 0.8rem;
+    padding-inline: 0.8rem;
+  }
+  
+.happy-outer{ 
+  height: 50px; 
+  animation: tier 8s linear infinite;
+}
+.happy{
+  width: 14%;
+  animation: circle 3s linear infinite;
+  
+}
+
+@keyframes tier {
+  0%{
+    transform: translate(-14%);
+  }
+  100%{
+    transform: translate(100%);
+  }
+
+}
+
  
    
 }
