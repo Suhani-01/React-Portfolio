@@ -1476,44 +1476,7 @@ body{
     border: 1px solid #453730;
   }
 }
-@media (max-width:565px){
-  .skill-card{
-    width: 300px;
-  }
-  .skill-card-vector-1{
-    left: 3rem;
-  }
-  .all-education{
-    margin-right: 0px;
-  }
-  .education-box{
-    padding: 1rem;
-    margin-left: 5rem;
-  }
-  .time-box{
-    left: -7.5rem;
-  }
 
-  .experience-container{
-    margin-right: 0px;
-    margin-left: 5rem;
-    width:83%;
-  
-  }
-  .experience-container .education-box{
-    margin-left: 0px;
-    width: auto;
-  }
-  .cert-line{
-    top: 27.5rem;
-  }
-  .cert-card-container{
-    padding-inline:3px;
-  }
-  .profile-card-container{
-    padding-inline:3px;
-  }
-}
 @media (max-width:480px){
   .view-port{
     padding-inline: 25px;
