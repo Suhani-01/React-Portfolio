@@ -55,7 +55,7 @@ const About = () => {
                   />
                 </span>
               </div>
-              <a href="/SuhaniResume.pdf" download>
+              <a href="images/Suhani BTech CSe 2026 Resume.pdf" download>
                 <button>Download Resume</button>
               </a>
             </div>
