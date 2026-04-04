@@ -1290,6 +1290,25 @@
     grid-template-columns: 65% 30%;
     gap: 3rem;
   }
+    .happy-outer{ 
+  height: 50px; 
+  animation: tier 14s linear infinite;
+}
+.happy{
+  width: 6%;
+  animation: circle 3s linear infinite;
+  
+}
+
+@keyframes tier {
+  0%{
+    transform: translate(-6%);
+  }
+  100%{
+    transform: translate(100%);
+  }
+
+}
   
 }
 
@@ -1418,6 +1437,25 @@
   .contact-image{
     width: 0px;
   }
+    .happy-outer{ 
+  height: 50px; 
+  animation: tier 9s linear infinite;
+}
+.happy{
+  width: 10%;
+  animation: circle 2.5s linear infinite;
+  
+}
+
+@keyframes tier {
+  0%{
+    transform: translate(-10%);
+  }
+  100%{
+    transform: translate(100%);
+  }
+
+}
   
 }
 
@@ -1511,6 +1549,7 @@
   .contact-content{
     gap: 0rem;
   }
+   
 }
 @media (max-width:660px){
   .profile-container{
