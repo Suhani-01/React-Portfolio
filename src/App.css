@@ -1266,7 +1266,6 @@
   }
   .name img{
     height: 4rem;
-    animation: circle 4s linear infinite;
   }
   .skill-card-vector-1{
     left: -10px;
