@@ -575,6 +575,7 @@
   justify-content: center;
 }
 .project-card{ 
+  position: relative;
   max-height: 20em;
   background-color: #FAF9F6;
   width:100%;
@@ -582,7 +583,6 @@
   border-radius: 30px;
   display: grid;
   grid-template-columns: 55% 45%; 
-  overflow: hidden; 
   padding: 1rem;
   border: 2px solid #453730;
   box-shadow: 5px 5px #453730;
@@ -628,6 +628,8 @@
 }
 .project-card-right button{
   cursor: pointer;
+  width: 90%;
+  margin-inline:auto;
   background-color: #452dc6;
   color: white;
   border-radius: 30px;
@@ -637,6 +639,20 @@
   border: none;
   box-shadow: 4px 4px white;
   transition: all 0.4s ease;
+}
+.group-tag{
+  position: absolute;
+  left: 34%;
+  top: -3%;
+  width: 30%;
+  background-color: white;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  color:#452dc6;
+  border-radius: 10px;
+  border:1px solid #452dc6;
+  font-weight: bold;
+  text-align: center;
 }
 .project-card-right button:hover{
   transform: scale(1.05);
@@ -654,7 +670,12 @@
  width: 100%;
  height: 100%;
 }
-
+.links-links{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
 .project-card .skill{
   padding: 3px;
   padding-inline: 15px;
@@ -1889,6 +1910,11 @@
   .contact-form input{
     font-size: 0.8rem;
     padding-inline: 0.8rem;
+  }
+  .group-tag{
+    top: -2%;
+    width: 40%;
+    left: 30%;
   }
   
 .happy-outer{ 

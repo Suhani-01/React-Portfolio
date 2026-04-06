@@ -5,10 +5,11 @@ import {
   FaDatabase,
   FaCss3Alt,
   FaHtml5,
+  FaPython,
   FaJs,
 } from "react-icons/fa";
 
-import { SiExpress } from "react-icons/si";
+import { SiExpress,SiTailwindcss , SiJinja } from "react-icons/si";
 
 import ProjectCard from "./ProjectCard";
 
@@ -26,20 +27,22 @@ const Projects = () => {
           name: "React",
         },
         {
+          icon:<SiExpress style={{ color: "#4e8d4b", fontSize: "18px" }} />,
+          name:"Express.js"
+        },
+        {
           icon: <FaNodeJs style={{ color: "#3C873A", fontSize: "18px" }} />,
           name: "Node.js",
         },
         {
           icon: <FaDatabase style={{ color: "#4DB33D", fontSize: "18px" }} />,
           name: "MongoDB",
-        },
+        }
+        ,
+        
         {
-          icon: <FaCss3Alt style={{ color: "#38BDF8", fontSize: "18px" }} />,
-          name: "Tailwind CSS",
-        },
-        {
-          icon:<SiExpress style={{ color: "#4e8d4b", fontSize: "18px" }} />,
-          name:"Express.js"
+          icon: <SiTailwindcss style={{ color:"#38BDF8", fontSize: "18px" }} />, 
+          name: "Tailwind CSS" 
         }
       ],
       link:"https://github.com/Suhani-01/Split-Mates",
@@ -57,27 +60,40 @@ const Projects = () => {
           name: "HTML",
         },
         {
-          icon: <FaCss3Alt style={{ color: "#38BDF8", fontSize: "18px" }} />,
+          icon: <SiTailwindcss style={{ color:"#38BDF8", fontSize: "18px" }} />, 
           name: "Tailwind CSS",
         },
       ],
       link:"https://github.com/Suhani-01/Razorpay-clone",
+      visit:"https://razorpay-clone-001.netlify.app/"
       
     },
 
     {
-      image: "/images/flip-and-match.png",
-      heading: "Flip & Match",
-      content:
-        "An interactive memory card game built with React. Includes animations, levels, and engaging gameplay for a fun experience.",
+      image: "/images/PowerPulse.png",
+      heading: "PowerPulse",
+      content: "Electricity demand prediction system for Delhi regions. Trained ML models on historical data and built Jinja-based UI to display real-time predictions.",
 
       techStack: [
         {
-          icon: <FaReact style={{ color: "#61DBFB", fontSize: "18px" }} />,
-          name: "React",
+          icon: <SiJinja   color="#B41717" />,
+          name: "Jinja",
         },
+        {
+          icon: <FaHtml5 style={{ color: "#E34F26", fontSize: "18px" }} />,
+          name: "HTML",
+        },
+        {
+          icon:<FaCss3Alt style={{ color: "#1572B6", fontSize: "18px" }}/>,
+          name:"CSS",
+        },
+        {
+          icon:<FaPython style={{color:"#3776AB", fontSize:"18px"}}/>,
+          name:"Python"
+        }
       ],
-      link:"https://github.com/Suhani-01/Flip-and-Match-React",
+      link:"https://github.com/Suhani-01/Power-Pulse-Enhanced",
+      visit: "https://power-pulse-enhanced-1.onrender.com/"
     },
   ];
   return (

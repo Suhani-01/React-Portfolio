@@ -1,9 +1,14 @@
 import React from 'react'
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectCard = ({projectDetails}) => {
   return (
     <div className='project-card-container'>
+        
         <div className='project-card'>
+
+            {projectDetails.heading=="PowerPulse" && <span className='group-tag'>Group Project</span>}
+
             {/* left part */}
             <div className='project-card-left'>
                 <h2>{projectDetails.heading}</h2>
@@ -29,7 +34,12 @@ const ProjectCard = ({projectDetails}) => {
                     <img src={projectDetails.image}/>
                 </div>
                 
-                <a style={{textDecoration:"none"}} href={projectDetails.link}><button>View Code ➔</button></a>
+                <div className='links-links'>
+                    { projectDetails.visit && <a target='blank' href={projectDetails.visit}><button><FaExternalLinkAlt /></button></a> }
+                    <a style={{textDecoration:"none"}} href={projectDetails.link}><button>View Code ➔</button></a>
+                    
+                </div>
+                
             </div>
             
         </div>
