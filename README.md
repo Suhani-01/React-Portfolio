@@ -1,6 +1,6 @@
 # 👩‍💻 Suhani's Personal Portfolio
 
-Welcome to my personal portfolio repository! This project is built using **React** and styled completely with **Vanilla CSS** to showcase my professional journey, skills, and technical achievements.
+Welcome to my personal portfolio repository! This project is built using **React** and styled completely with **Vanilla CSS** to showcase my journey, skills, projects and achievements.
 
 🔗 **Live Website:** [Click Here to View My Portfolio](https://react-portfolio-woad-mu.vercel.app/)
 
