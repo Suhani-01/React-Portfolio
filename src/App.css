@@ -360,6 +360,28 @@
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: white;
+  
+}
+.hil{
+  animation: hilight 1s ease-in-out infinite;
+}
+@keyframes hilight{
+  0%{
+    box-shadow: 4px 4px 4px #452dc6;
+  }
+  25%{
+     box-shadow: -4px 4px 4px #452dc6;
+  }
+  50%{
+     box-shadow: -4px -4px 4px #452dc6;
+  }
+  75%{
+    box-shadow: 4px -4px 4px #452dc6;
+  }
+  100%{
+    box-shadow: 4px 4px 4px  #452dc6;
+  }
+   
 }
 .profile-top .circle{
   height: 30px

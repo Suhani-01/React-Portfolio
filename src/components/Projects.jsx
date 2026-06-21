@@ -16,6 +16,28 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const allProjects = [
     {
+      image: "/images/PowerDemand.png",
+      heading: "PowerDemand",
+      content: "Electricity demand prediction system for Delhi regions. Trained ML models on historical data and built UI using React to display real-time predictions.",
+
+      techStack: [
+        {
+          icon: <FaReact style={{ color: "#61DBFB", fontSize: "18px" }} />,
+          name: "React",
+        },
+        {
+          icon: <SiTailwindcss style={{ color:"#38BDF8", fontSize: "18px" }} />, 
+          name: "Tailwind CSS" 
+        },
+        {
+          icon:<FaPython style={{color:"#3776AB", fontSize:"18px"}}/>,
+          name:"Python"
+        }
+      ],
+      link:"https://github.com/Suhani-01/PowerDemand",
+      visit: "https://power-demand-fi6iq210t-suhani-01s-projects.vercel.app/"
+    },
+    {
       image: "/images/split-mates.png",
       heading: "SplitMates",
       content:
@@ -69,32 +91,7 @@ const Projects = () => {
       
     },
 
-    {
-      image: "/images/PowerPulse.png",
-      heading: "PowerPulse",
-      content: "Electricity demand prediction system for Delhi regions. Trained ML models on historical data and built Jinja-based UI to display real-time predictions.",
-
-      techStack: [
-        {
-          icon: <SiJinja   color="#B41717" />,
-          name: "Jinja",
-        },
-        {
-          icon: <FaHtml5 style={{ color: "#E34F26", fontSize: "18px" }} />,
-          name: "HTML",
-        },
-        {
-          icon:<FaCss3Alt style={{ color: "#1572B6", fontSize: "18px" }}/>,
-          name:"CSS",
-        },
-        {
-          icon:<FaPython style={{color:"#3776AB", fontSize:"18px"}}/>,
-          name:"Python"
-        }
-      ],
-      link:"https://github.com/Suhani-01/Power-Pulse-Enhanced",
-      visit: "https://power-pulse-enhanced-1.onrender.com/"
-    },
+    
   ];
   return (
     <section id="project" className="project-outer">

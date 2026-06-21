@@ -101,19 +101,19 @@ const About = () => {
 
             {/* contact part */}
             <div className="profile-bottom">
-              <div className="circle">
+              <div className="circle hil">
                 <a href="https://github.com/Suhani-01" target="blank">
                   <FaGithub size={20} />
                 </a>
               </div>
 
-              <div className="circle">
+              <div className="circle hil">
                 <a href="https://www.linkedin.com/in/suhani01/" target="blank">
                   <FaLinkedin size={20} />
                 </a>
               </div>
 
-              <div className="circle">
+              <div className="circle hil">
                 <a href="mailto:suhaninegi124@gmail.com" target="blank">
                   <FaEnvelope size={20} />
                 </a>

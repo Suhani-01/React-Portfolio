@@ -41,7 +41,7 @@ const Certification = () => {
       profile:"LeetCode",
       userName:"Suhani_01",
       profileimg:"/images/profile.jpg",
-      description:"Solved 300+ problems",
+      description:"Solved 500+ problems",
       link:"https://leetcode.com/u/Suhani_01/",
     },
     {
